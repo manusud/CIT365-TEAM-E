@@ -24,5 +24,9 @@ namespace MegaDesk_CostaLuiz
             formMainMenu.Show();
         }
 
+        private void lbCostumerName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

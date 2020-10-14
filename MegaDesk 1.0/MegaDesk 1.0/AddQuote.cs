@@ -27,11 +27,8 @@ namespace MegaDesk_CostaLuiz
             }
 
             // add itens Surface Materials combobox
-
-            foreach (var item in Enum.GetValues(typeof(DesktopMaterial)))
-            {
-                QuoteMaterial.Items.Add(item);
-            }
+            List<string> listMaterial = ((DesktopMaterial[])Enum.GetValues(typeof(DesktopMaterial))).Select(c => c.ToString()).ToList();
+            QuoteMaterial.DataSource = listMaterial;
 
             // add itens to Rusch combobox
             QuoteRush.Items.Add("Normal");
@@ -163,6 +160,11 @@ namespace MegaDesk_CostaLuiz
                 if (testWidth.Text is null)
                     MessageBox.Show("The With fiel cannot be null");
             }
-        }   
+        }
+
+        private void QuoteCostumerName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

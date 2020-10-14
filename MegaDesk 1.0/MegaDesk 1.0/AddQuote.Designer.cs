@@ -69,6 +69,7 @@
             this.QuoteCostumerName.Name = "QuoteCostumerName";
             this.QuoteCostumerName.Size = new System.Drawing.Size(353, 32);
             this.QuoteCostumerName.TabIndex = 0;
+            this.QuoteCostumerName.TextChanged += new System.EventHandler(this.QuoteCostumerName_TextChanged);
             // 
             // btSubmit
             // 

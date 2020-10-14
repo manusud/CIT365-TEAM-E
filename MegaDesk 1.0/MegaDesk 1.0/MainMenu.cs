@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_CostaLuiz
 {
@@ -54,6 +55,11 @@ namespace MegaDesk_CostaLuiz
         {
             // To quit application
             Application.Exit();
+        }
+
+        private void mainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

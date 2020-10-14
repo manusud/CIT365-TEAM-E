@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_CostaLuiz
 {
@@ -95,5 +97,20 @@ namespace MegaDesk_CostaLuiz
         {
             throw new NotImplementedException();
         }
+
+        // Read in the rush order price list from this file: rushOrderPrices.txt
+        public int GetRushOrder(int sizeDesk, string rushDays)
+        {
+            //Use these values from the file versus using 'magically' embedded values in the rush order quote amount logic within your DeskQuote class.
+            string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            StreamReader reader = new StreamReader(startupPath + @"\MegaDesk 1.0\Properties\DataBase\rushOrderPrices.txt");
+            
+            reader.Close();
+
+
+
+            return this.rushCost;
+        }
+
     }
 }

@@ -92,6 +92,7 @@
             this.lbCostumerName.Size = new System.Drawing.Size(280, 34);
             this.lbCostumerName.TabIndex = 18;
             this.lbCostumerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCostumerName.Click += new System.EventHandler(this.lbCostumerName_Click);
             // 
             // lbBasePrice
             // 

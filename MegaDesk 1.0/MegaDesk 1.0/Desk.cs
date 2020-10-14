@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 enum DesktopMaterial
-{
+{    
+    Select,
     Oak = 200,
     Laminate = 100,
     Pine = 50,
