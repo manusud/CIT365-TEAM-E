@@ -13,7 +13,7 @@ enum DesktopMaterial
     Laminate = 100,
     Pine = 50,
     Rosewood = 300,
-    Venner = 125
+    Veneer = 125
 }
 
 namespace MegaDesk_CostaLuiz
@@ -24,16 +24,16 @@ namespace MegaDesk_CostaLuiz
         // constants to Add Quote
         public const int WIDTH_MIN = 24;
         public const int WIDTH_MAX = 96;
-        public const int DEPH_MIN = 12;
-        public const int DEPH_MAX = 48;
+        public const int depth_MIN = 12;
+        public const int depth_MAX = 48;
         public const int DRAWER_PRICE = 50;
         public const int BASE_DESK_PRICE = 200;
         public const int BASE_SIZE_INCL = 1000;
         public const int DESKTOP_SURFACE_AREA = 1;
 
-        public string costumerName;
+        public string customerName;
         public int widthDesk;
-        public int dephDesk;
+        public int depthDesk;
         public int sizeDesk;
         public int drawers;
         public string rushDays;
@@ -47,29 +47,29 @@ namespace MegaDesk_CostaLuiz
             return DateTime.Now;
         }
 
-        public void setCostumerName(string costName)
+        public void setcustomerName(string custName)
         {
-            costumerName = costName;
+            customerName = custName;
         }
 
-        public string getCostumerName()
+        public string getcustomerName()
         {
-            return costumerName;
+            return customerName;
         }
 
-        public void setWidth(string width)
+        public void SetWidth(string width)
         {
             this.widthDesk = int.Parse(width);
         }
 
-        public void setDeph(string deph)
+        public void SetDepth(string depth)
         {
-            this.dephDesk = int.Parse(deph);
+            this.depthDesk = int.Parse(depth);
         }
 
-        public int getSize()
+        public int GetSize()
         {
-            this.sizeDesk = this.dephDesk * this.widthDesk;
+            this.sizeDesk = this.depthDesk * this.widthDesk;
             return this.sizeDesk;
         }
 

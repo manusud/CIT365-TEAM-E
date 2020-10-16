@@ -24,7 +24,12 @@ namespace MegaDesk_CostaLuiz
             formMainMenu.Show();
         }
 
-        private void lbCostumerName_Click(object sender, EventArgs e)
+        private void lbCustomerName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbMaterial_Click(object sender, EventArgs e)
         {
 
         }
