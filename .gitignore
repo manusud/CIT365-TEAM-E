@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/MegaDesk 1.0/MegaDesk 1.0/packages.config
