@@ -159,7 +159,7 @@
             this.QuoteDepth.TabIndex = 3;
             this.QuoteDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.QuoteDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDepth);
-            this.QuoteDepth.Validating += new System.ComponentModel.CancelEventHandler(this.ValidadeDeph2);
+            this.QuoteDepth.Validating += new System.ComponentModel.CancelEventHandler(this.Validadedepth2);
             // 
             // label2
             // 
