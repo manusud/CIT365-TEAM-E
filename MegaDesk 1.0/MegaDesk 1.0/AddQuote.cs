@@ -169,5 +169,10 @@ namespace MegaDesk_CostaLuiz
         {
 
         }
+
+        private void lbCostumerName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
