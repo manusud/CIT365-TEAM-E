@@ -73,6 +73,9 @@ namespace MegaDesk_CostaLuiz
                 formQuote.lbMaterialCost.Text = myDeskQuote.getCostMaterial(this.QuoteMaterial.Text).ToString();
 
                 formQuote.lbShippingMethod.Text = this.QuoteRush.Text;
+                
+                myDeskQuote.GetRushOrder(); // Add code line in 2020-10-16
+                
                 formQuote.lbShippingCost.Text = myDeskQuote.getRushCost(myDesk.getSize(), this.QuoteRush.Text).ToString();
 
                 int totalCost = int.Parse(formQuote.lbSizeCost.Text) + int.Parse(formQuote.lbBasePrice.Text) +

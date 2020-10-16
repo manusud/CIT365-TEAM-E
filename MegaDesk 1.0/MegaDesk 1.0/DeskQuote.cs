@@ -16,6 +16,7 @@ namespace MegaDesk_CostaLuiz
         private int rushCost;
         private int myOverage;
         private int sizeCost;
+        private string[,] priceRush = new string[3, 3];
 
         public DeskQuote()
         {
@@ -62,29 +63,29 @@ namespace MegaDesk_CostaLuiz
             {
                 case "3 Days":
                     if (sizeDesk < 1000)
-                        this.rushCost = 60;
+                        this.rushCost = int.Parse(this.priceRush[0, 0]);
                     if (sizeDesk >= 1000 && sizeDesk <= 2000)
-                        this.rushCost = 70;
+                        this.rushCost = int.Parse(this.priceRush[0, 1]);
                     if (sizeDesk > 2000)
-                        this.rushCost = 80;
+                        this.rushCost = int.Parse(this.priceRush[0, 2]);
                     break;
                 
                 case "5 Days":
                     if (sizeDesk < 1000)
-                        this.rushCost = 40;
+                        this.rushCost = int.Parse(this.priceRush[1, 0]);
                     if (sizeDesk >= 1000 && sizeDesk <= 2000)
-                        this.rushCost = 50;
+                        this.rushCost = int.Parse(this.priceRush[1, 1]);
                     if (sizeDesk > 2000)
-                        this.rushCost = 60;
+                        this.rushCost = int.Parse(this.priceRush[1, 2]);
                     break;
             
                 case "7 Days":
                     if (sizeDesk < 1000)
-                        this.rushCost = 30;
+                        this.rushCost = int.Parse(this.priceRush[2, 0]);
                     if (sizeDesk >= 1000 && sizeDesk <= 2000)
-                        this.rushCost = 35;
+                        this.rushCost = int.Parse(this.priceRush[2, 1]);
                     if (sizeDesk > 2000)
-                        this.rushCost = 40;
+                        this.rushCost = int.Parse(this.priceRush[2, 2]);
                     break;
                 default:
                     this.rushCost = 0;
@@ -98,18 +99,48 @@ namespace MegaDesk_CostaLuiz
             throw new NotImplementedException();
         }
 
+        /***********************************************
+         * Created by: Luiz Manoel
+         * In 2020/10/16 01:24
+         * ********************************************/
+        
+        // Create a GetRushOrder method within the DeskQuote class to handle the population of a member variable that holds a two dimension array that encases the logic in a try catch block
         // Read in the rush order price list from this file: rushOrderPrices.txt
-        public int GetRushOrder(int sizeDesk, string rushDays)
+        public void GetRushOrder()
         {
-            //Use these values from the file versus using 'magically' embedded values in the rush order quote amount logic within your DeskQuote class.
-            string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-            StreamReader reader = new StreamReader(startupPath + @"\MegaDesk 1.0\Properties\DataBase\rushOrderPrices.txt");
-            
-            reader.Close();
+            try
+            {
+                //Use these values from the file versus using 'magically' embedded values in the rush order quote amount logic within your DeskQuote class.
+                string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
 
+                // read the values into a single dimension array and then use nested loops to populate a two dimensional array with three rows and three columns.
+                string[] lines = File.ReadAllLines(startupPath + @"\MegaDesk 1.0\MegaDesk 1.0\Properties\DataBase\rushOrderPrices.txt").ToArray();
 
+                for (int x = 0; x < lines.Length; x++)
+                {
+                    for (int y = 0; y < 3; y++)
+                    {
+                        this.priceRush[0, y] = lines[x];
+                        x++;
+                    }
 
-            return this.rushCost;
+                    for (int y = 0; y < 3; y++)
+                    {
+                        this.priceRush[1, y] = lines[x];
+                        x++;
+                    }
+
+                    for (int y = 0; y < 3; y++)
+                    {
+                        this.priceRush[2, y] = lines[x];
+                        x++;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error happened:" + e.Message);
+            }
         }
 
     }
