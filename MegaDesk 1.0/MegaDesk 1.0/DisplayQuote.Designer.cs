@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(quote));
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbCostumerName = new System.Windows.Forms.Label();
+            this.lbcustomerName = new System.Windows.Forms.Label();
             this.lbBasePrice = new System.Windows.Forms.Label();
             this.lbBaseSizeIn = new System.Windows.Forms.Label();
             this.lbCostPerIn = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.button2.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(23, 626);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 49);
             this.button2.TabIndex = 17;
@@ -87,23 +87,23 @@
             this.label1.Text = "Customer Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbCostumerName
+            // lbcustomerName
             // 
-            this.lbCostumerName.BackColor = System.Drawing.Color.White;
-            this.lbCostumerName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCostumerName.Location = new System.Drawing.Point(315, 21);
-            this.lbCostumerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbCostumerName.Name = "lbCostumerName";
-            this.lbCostumerName.Size = new System.Drawing.Size(293, 42);
-            this.lbCostumerName.TabIndex = 18;
-            this.lbCostumerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbCostumerName.Click += new System.EventHandler(this.lbCostumerName_Click);
+            this.lbcustomerName.BackColor = System.Drawing.Color.White;
+            this.lbcustomerName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcustomerName.Location = new System.Drawing.Point(315, 21);
+            this.lbcustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbcustomerName.Name = "lbcustomerName";
+            this.lbcustomerName.Size = new System.Drawing.Size(293, 42);
+            this.lbcustomerName.TabIndex = 18;
+            this.lbcustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbcustomerName.Click += new System.EventHandler(this.lbCustomerName_Click);
             // 
             // lbBasePrice
             // 
             this.lbBasePrice.BackColor = System.Drawing.Color.White;
             this.lbBasePrice.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBasePrice.ForeColor = System.Drawing.Color.DimGray;
+            this.lbBasePrice.ForeColor = System.Drawing.Color.Maroon;
             this.lbBasePrice.Location = new System.Drawing.Point(313, 102);
             this.lbBasePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBasePrice.Name = "lbBasePrice";
@@ -151,7 +151,7 @@
             // 
             this.lbDrawerCost.BackColor = System.Drawing.Color.White;
             this.lbDrawerCost.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDrawerCost.ForeColor = System.Drawing.Color.DimGray;
+            this.lbDrawerCost.ForeColor = System.Drawing.Color.Maroon;
             this.lbDrawerCost.Location = new System.Drawing.Point(313, 338);
             this.lbDrawerCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDrawerCost.Name = "lbDrawerCost";
@@ -170,6 +170,7 @@
             this.lbMaterial.Size = new System.Drawing.Size(200, 25);
             this.lbMaterial.TabIndex = 24;
             this.lbMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMaterial.Click += new System.EventHandler(this.lbMaterial_Click);
             // 
             // lbTotalSize
             // 
@@ -199,7 +200,7 @@
             // 
             this.lbSizeCost.BackColor = System.Drawing.Color.White;
             this.lbSizeCost.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSizeCost.ForeColor = System.Drawing.Color.DimGray;
+            this.lbSizeCost.ForeColor = System.Drawing.Color.Maroon;
             this.lbSizeCost.Location = new System.Drawing.Point(313, 263);
             this.lbSizeCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSizeCost.Name = "lbSizeCost";
@@ -211,7 +212,7 @@
             // 
             this.lbMaterialCost.BackColor = System.Drawing.Color.White;
             this.lbMaterialCost.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaterialCost.ForeColor = System.Drawing.Color.DimGray;
+            this.lbMaterialCost.ForeColor = System.Drawing.Color.Maroon;
             this.lbMaterialCost.Location = new System.Drawing.Point(313, 411);
             this.lbMaterialCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMaterialCost.Name = "lbMaterialCost";
@@ -235,7 +236,7 @@
             // 
             this.lbShippingCost.BackColor = System.Drawing.Color.White;
             this.lbShippingCost.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbShippingCost.ForeColor = System.Drawing.Color.DimGray;
+            this.lbShippingCost.ForeColor = System.Drawing.Color.Maroon;
             this.lbShippingCost.Location = new System.Drawing.Point(313, 487);
             this.lbShippingCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbShippingCost.Name = "lbShippingCost";
@@ -300,7 +301,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(200, 25);
             this.label18.TabIndex = 41;
-            this.label18.Text = "Maerial cost:";
+            this.label18.Text = "Material cost:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label19
@@ -428,7 +429,7 @@
             this.lbDateTime.BackColor = System.Drawing.Color.Black;
             this.lbDateTime.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDateTime.ForeColor = System.Drawing.Color.White;
-            this.lbDateTime.Location = new System.Drawing.Point(311, 640);
+            this.lbDateTime.Location = new System.Drawing.Point(311, 651);
             this.lbDateTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDateTime.Name = "lbDateTime";
             this.lbDateTime.Size = new System.Drawing.Size(200, 25);
@@ -469,11 +470,11 @@
             this.Controls.Add(this.lbCostPerIn);
             this.Controls.Add(this.lbBaseSizeIn);
             this.Controls.Add(this.lbBasePrice);
-            this.Controls.Add(this.lbCostumerName);
+            this.Controls.Add(this.lbcustomerName);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "quote";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -485,7 +486,7 @@
         #endregion
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label lbCostumerName;
+        public System.Windows.Forms.Label lbcustomerName;
         public System.Windows.Forms.Label lbBasePrice;
         public System.Windows.Forms.Label lbBaseSizeIn;
         public System.Windows.Forms.Label lbCostPerIn;

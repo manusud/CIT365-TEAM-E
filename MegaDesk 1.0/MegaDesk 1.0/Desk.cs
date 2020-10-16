@@ -13,7 +13,7 @@ enum DesktopMaterial
     Laminate = 100,
     Pine = 50,
     Rosewood = 300,
-    Venner = 125
+    Veneer = 125
 }
 
 namespace MegaDesk_CostaLuiz
@@ -31,7 +31,7 @@ namespace MegaDesk_CostaLuiz
         public const int BASE_SIZE_INCL = 1000;
         public const int DESKTOP_SURFACE_AREA = 1;
 
-        public string costumerName;
+        public string customerName;
         public int widthDesk;
         public int dephDesk;
         public int sizeDesk;
@@ -47,14 +47,14 @@ namespace MegaDesk_CostaLuiz
             return DateTime.Now;
         }
 
-        public void setCostumerName(string costName)
+        public void setcustomerName(string costName)
         {
-            costumerName = costName;
+            customerName = costName;
         }
 
-        public string getCostumerName()
+        public string getcustomerName()
         {
-            return costumerName;
+            return customerName;
         }
 
         public void setWidth(string width)

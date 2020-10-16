@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewQuote));
-            this.lbCostumerName = new System.Windows.Forms.Label();
-            this.QuoteCostumerName = new System.Windows.Forms.TextBox();
+            this.lbcustomerName = new System.Windows.Forms.Label();
+            this.QuotecustomerName = new System.Windows.Forms.TextBox();
             this.btSubmit = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,28 +53,28 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbCostumerName
+            // lbcustomerName
             // 
-            this.lbCostumerName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCostumerName.ForeColor = System.Drawing.Color.White;
-            this.lbCostumerName.Location = new System.Drawing.Point(74, 37);
-            this.lbCostumerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbCostumerName.Name = "lbCostumerName";
-            this.lbCostumerName.Size = new System.Drawing.Size(262, 42);
-            this.lbCostumerName.TabIndex = 0;
-            this.lbCostumerName.Text = "Customer Name:";
-            this.lbCostumerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbCostumerName.Click += new System.EventHandler(this.lbCostumerName_Click);
+            this.lbcustomerName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcustomerName.ForeColor = System.Drawing.Color.White;
+            this.lbcustomerName.Location = new System.Drawing.Point(74, 37);
+            this.lbcustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbcustomerName.Name = "lbcustomerName";
+            this.lbcustomerName.Size = new System.Drawing.Size(262, 42);
+            this.lbcustomerName.TabIndex = 0;
+            this.lbcustomerName.Text = "Customer Name:";
+            this.lbcustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbcustomerName.Click += new System.EventHandler(this.lbcustomerName_Click);
             // 
-            // QuoteCostumerName
+            // QuotecustomerName
             // 
-            this.QuoteCostumerName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuoteCostumerName.Location = new System.Drawing.Point(349, 41);
-            this.QuoteCostumerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.QuoteCostumerName.Name = "QuoteCostumerName";
-            this.QuoteCostumerName.Size = new System.Drawing.Size(418, 38);
-            this.QuoteCostumerName.TabIndex = 0;
-            this.QuoteCostumerName.TextChanged += new System.EventHandler(this.QuoteCostumerName_TextChanged);
+            this.QuotecustomerName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuotecustomerName.Location = new System.Drawing.Point(349, 41);
+            this.QuotecustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuotecustomerName.Name = "QuotecustomerName";
+            this.QuotecustomerName.Size = new System.Drawing.Size(418, 38);
+            this.QuotecustomerName.TabIndex = 0;
+            this.QuotecustomerName.TextChanged += new System.EventHandler(this.QuotecustomerName_TextChanged);
             // 
             // btSubmit
             // 
@@ -317,8 +317,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btSubmit);
-            this.Controls.Add(this.QuoteCostumerName);
-            this.Controls.Add(this.lbCostumerName);
+            this.Controls.Add(this.QuotecustomerName);
+            this.Controls.Add(this.lbcustomerName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
@@ -336,8 +336,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbCostumerName;
-        private System.Windows.Forms.TextBox QuoteCostumerName;
+        private System.Windows.Forms.Label lbcustomerName;
+        private System.Windows.Forms.TextBox QuotecustomerName;
         private System.Windows.Forms.Button btSubmit;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.GroupBox groupBox1;

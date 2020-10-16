@@ -41,7 +41,7 @@ namespace MegaDesk_CostaLuiz
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (this.QuoteCostumerName.Text != "" && this.QuoteWidth.Text != "" &&
+            if (this.QuotecustomerName.Text != "" && this.QuoteWidth.Text != "" &&
                 this.QuoteDepth.Text != "" && this.QuoteDrawers.Text != "" &&
                 this.QuoteMaterial.Text != "" && this.QuoteRush.Text != "")
             {
@@ -49,14 +49,14 @@ namespace MegaDesk_CostaLuiz
                 Desk myDesk = new Desk();
                 DeskQuote myDeskQuote = new DeskQuote();
 
-                myDesk.setCostumerName(this.QuoteCostumerName.Text);
+                myDesk.setcustomerName(this.QuotecustomerName.Text);
                 myDesk.setWidth(this.QuoteWidth.Text);
                 myDesk.setDeph(this.QuoteDepth.Text);
                 myDesk.setNumberDrawers(this.QuoteDrawers.Text);
                 myDesk.setMaterial(this.QuoteMaterial.Text);
                 myDesk.setRush(this.QuoteRush.Text);
 
-                formQuote.lbCostumerName.Text = myDesk.getCostumerName();
+                formQuote.lbcustomerName.Text = myDesk.getcustomerName();
                 formQuote.lbBasePrice.Text = Desk.BASE_DESK_PRICE.ToString();
                 formQuote.lbBaseSizeIn.Text = Desk.BASE_SIZE_INCL.ToString();   
                 formQuote.lbCostPerIn.Text = Desk.DESKTOP_SURFACE_AREA.ToString();
@@ -165,12 +165,12 @@ namespace MegaDesk_CostaLuiz
             }
         }
 
-        private void QuoteCostumerName_TextChanged(object sender, EventArgs e)
+        private void QuotecustomerName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lbCostumerName_Click(object sender, EventArgs e)
+        private void lbcustomerName_Click(object sender, EventArgs e)
         {
 
         }
