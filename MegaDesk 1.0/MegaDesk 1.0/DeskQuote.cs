@@ -114,7 +114,7 @@ namespace MegaDesk_CostaLuiz
                 string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
 
                 // read the values into a single dimension array and then use nested loops to populate a two dimensional array with three rows and three columns.
-                string[] lines = File.ReadAllLines(startupPath + @"\MegaDesk 1.0\MegaDesk 1.0\Properties\DataBase\rushOrderPrices.txt").ToArray();
+                string[] lines = File.ReadAllLines(startupPath + @"\MegaDesk 1.0\MegaDesk 1.0\DataBase\rushOrderPrices.txt").ToArray();
 
                 for (int x = 0; x < lines.Length; x++)
                 {
