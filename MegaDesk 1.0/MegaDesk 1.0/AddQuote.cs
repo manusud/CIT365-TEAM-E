@@ -86,7 +86,7 @@ namespace MegaDesk_CostaLuiz
                 formQuote.lbTotalCost.Text = totalCost.ToString();
                 formQuote.lbDateTime.Text = myDesk.GetDateTime().ToString();
 
-                QuotesModel.saveQuote(myDeskQuote);
+                QuotesModel.saveQuote(myDesk);
 
                 this.Close();
                 formQuote.Show();

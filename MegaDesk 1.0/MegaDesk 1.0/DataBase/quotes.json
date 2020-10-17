@@ -1,9 +1,38 @@
-{
-  "customerName": null,
-  "widthDesk": 0,
-  "depthDesk": 0,
-  "sizeDesk": 0,
-  "drawers": 0,
-  "rushDays": null,
-  "material": null
-}
+[
+  {
+    "customerName": "Bob Ross",
+    "widthDesk": 24,
+    "depthDesk": 12,
+    "sizeDesk": 288,
+    "drawers": 1,
+    "rushDays": "Normal",
+    "material": "Oak"
+  },
+  {
+    "customerName": "Chuck Norris",
+    "widthDesk": 96,
+    "depthDesk": 48,
+    "sizeDesk": 4608,
+    "drawers": 7,
+    "rushDays": "3 Days",
+    "material": "Rosewood"
+  },
+  {
+    "customerName": "Spiderman",
+    "widthDesk": 30,
+    "depthDesk": 30,
+    "sizeDesk": 900,
+    "drawers": 5,
+    "rushDays": "5 Days",
+    "material": "Laminate"
+  },
+  {
+    "customerName": "George Washington",
+    "widthDesk": 72,
+    "depthDesk": 36,
+    "sizeDesk": 2592,
+    "drawers": 5,
+    "rushDays": "Normal",
+    "material": "Veneer"
+  }
+]
