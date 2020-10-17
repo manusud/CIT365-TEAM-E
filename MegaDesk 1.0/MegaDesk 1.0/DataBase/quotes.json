@@ -34,5 +34,14 @@
     "drawers": 5,
     "rushDays": "Normal",
     "material": "Veneer"
+  },
+  {
+    "customerName": "Bill Gates",
+    "widthDesk": 24,
+    "depthDesk": 12,
+    "sizeDesk": 288,
+    "drawers": 2,
+    "rushDays": "Normal",
+    "material": "Laminate"
   }
 ]

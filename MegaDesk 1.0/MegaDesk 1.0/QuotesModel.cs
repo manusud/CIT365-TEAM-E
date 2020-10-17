@@ -13,18 +13,8 @@ namespace MegaDesk_CostaLuiz
     class QuotesModel
     {
 
-        public static void whyWontThisWork()
+        public static void SaveQuote(Desk deskQuote)
         {
-            //Use these values from the file versus using 'magically' embedded values in the rush order quote amount logic within your DeskQuote class.
-            string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
-
-            // read the values into a single dimension array and then use nested loops to populate a two dimensional array with three rows and three columns.
-            string quotes = File.ReadAllText(startupPath + @"\MegaDesk 1.0\MegaDesk 1.0\DataBase\quotes.json");
-        }
-
-        public static void saveQuote(Desk deskQuote)
-        {
-
             //find the reletive path to the quotes.json file
             string quotesPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             quotesPath += @"\DataBase\quotes.json";
@@ -48,6 +38,33 @@ namespace MegaDesk_CostaLuiz
 
             // write Json String to file
             File.WriteAllText(quotesPath, outputString);
+        }
+
+        public static List<Desk> LoadQuotes()
+        {
+            List<Desk> quotesList = new List<Desk>();
+
+            //find the reletive path to the quotes.json file
+            string quotesPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+            quotesPath += @"\DataBase\quotes.json";
+            string quotes = File.ReadAllText(quotesPath);
+
+            if (quotes.Length == 0)
+            {
+                return null;
+            }
+
+            JArray quoteArray = JArray.Parse(quotes);
+
+            foreach (JObject quote in quoteArray)
+            {
+                // convert each object in the json file to a string, then a Json Object, then a Desk
+                String quoteString = JsonConvert.SerializeObject(quote, Formatting.Indented);
+                Desk desk = JsonConvert.DeserializeObject<Desk>(quoteString);
+                quotesList.Add(desk);
+            }
+
+            return quotesList;
         }
     }
 }
