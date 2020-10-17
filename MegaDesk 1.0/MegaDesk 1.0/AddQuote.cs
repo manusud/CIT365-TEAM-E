@@ -51,7 +51,7 @@ namespace MegaDesk_CostaLuiz
 
                 myDesk.setcustomerName(this.QuotecustomerName.Text);
                 myDesk.SetWidth(this.QuoteWidth.Text);
-                myDesk.setdepth(this.QuoteDepth.Text);
+                myDesk.SetDepth(this.QuoteDepth.Text);
                 myDesk.setNumberDrawers(this.QuoteDrawers.Text);
                 myDesk.setMaterial(this.QuoteMaterial.Text);
                 myDesk.setRush(this.QuoteRush.Text);
