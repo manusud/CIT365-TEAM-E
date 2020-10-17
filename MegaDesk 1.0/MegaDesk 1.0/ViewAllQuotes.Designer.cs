@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllQuotes));
             this.closeAllQuotes = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.quotesModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quotesModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotesModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotesModelBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // closeAllQuotes
@@ -45,16 +52,38 @@
             this.closeAllQuotes.UseVisualStyleBackColor = true;
             this.closeAllQuotes.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.quotesModelBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(190, 102);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // quotesModelBindingSource
+            // 
+            this.quotesModelBindingSource.DataSource = typeof(MegaDesk_CostaLuiz.QuotesModel);
+            // 
+            // quotesModelBindingSource1
+            // 
+            this.quotesModelBindingSource1.DataSource = typeof(MegaDesk_CostaLuiz.QuotesModel);
+            // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(578, 449);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.closeAllQuotes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotesModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotesModelBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -62,5 +91,8 @@
         #endregion
 
         private System.Windows.Forms.Button closeAllQuotes;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource quotesModelBindingSource1;
+        private System.Windows.Forms.BindingSource quotesModelBindingSource;
     }
 }

@@ -75,7 +75,8 @@ namespace MegaDesk_CostaLuiz
                 formQuote.lbShippingMethod.Text = this.QuoteRush.Text;
                 
                 myDeskQuote.GetRushOrder(); // Add code line in 2020-10-16
-                
+
+
                 formQuote.lbShippingCost.Text = myDeskQuote.getRushCost(myDesk.GetSize(), this.QuoteRush.Text).ToString();
 
                 int totalCost = int.Parse(formQuote.lbSizeCost.Text) + int.Parse(formQuote.lbBasePrice.Text) +
@@ -85,6 +86,7 @@ namespace MegaDesk_CostaLuiz
                 formQuote.lbTotalCost.Text = totalCost.ToString();
                 formQuote.lbDateTime.Text = myDesk.GetDateTime().ToString();
 
+                QuotesModel.saveQuote(myDeskQuote);
 
                 this.Close();
                 formQuote.Show();
