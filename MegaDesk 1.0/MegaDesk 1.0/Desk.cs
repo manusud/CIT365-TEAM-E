@@ -31,12 +31,12 @@ namespace MegaDesk_CostaLuiz
         public const int BASE_SIZE_INCL = 1000;
         public const int DESKTOP_SURFACE_AREA = 1;
 
-        public string customerName;
+        //public string customerName;
         public int widthDesk;
         public int depthDesk;
         public int sizeDesk;
         public int drawers;
-        public string rushDays;
+        //public string rushDays;
         public string material;
 
 
@@ -47,7 +47,7 @@ namespace MegaDesk_CostaLuiz
             return DateTime.Now;
         }
 
-        public void setcustomerName(string custName)
+        /*public void setcustomerName(string custName)
         {
             customerName = custName;
         }
@@ -55,7 +55,7 @@ namespace MegaDesk_CostaLuiz
         public string getcustomerName()
         {
             return customerName;
-        }
+        }*/
 
         public void SetWidth(string width)
         {
@@ -83,10 +83,10 @@ namespace MegaDesk_CostaLuiz
             this.material = strMaterial;
         }
 
-        public void setRush(string rush)
+        /*public void setRush(string rush)
         {
             this.rushDays = rush;
-        }
+        }*/
 
     }
 }

@@ -49,22 +49,24 @@ namespace MegaDesk_CostaLuiz
                 Desk myDesk = new Desk();
                 DeskQuote myDeskQuote = new DeskQuote();
 
-                myDesk.setcustomerName(this.QuotecustomerName.Text);
-                myDesk.SetWidth(this.QuoteWidth.Text);
-                myDesk.SetDepth(this.QuoteDepth.Text);
-                myDesk.setNumberDrawers(this.QuoteDrawers.Text);
-                myDesk.setMaterial(this.QuoteMaterial.Text);
-                myDesk.setRush(this.QuoteRush.Text);
+                myDeskQuote.setcustomerName(this.QuotecustomerName.Text);
+                myDeskQuote.desk = myDesk;
+                myDeskQuote.desk.SetWidth(this.QuoteWidth.Text);
+                myDeskQuote.desk.SetDepth(this.QuoteDepth.Text);
+                myDeskQuote.desk.setNumberDrawers(this.QuoteDrawers.Text);
+                myDeskQuote.desk.setMaterial(this.QuoteMaterial.Text);
+                myDeskQuote.setRush(this.QuoteRush.Text);
+                
 
-                formQuote.lbcustomerName.Text = myDesk.getcustomerName();
+                formQuote.lbcustomerName.Text = myDeskQuote.getcustomerName();
                 formQuote.lbBasePrice.Text = Desk.BASE_DESK_PRICE.ToString();
                 formQuote.lbBaseSizeIn.Text = Desk.BASE_SIZE_INCL.ToString();   
                 formQuote.lbCostPerIn.Text = Desk.DESKTOP_SURFACE_AREA.ToString();
-                formQuote.lbTotalSize.Text = myDesk.GetSize().ToString();
+                formQuote.lbTotalSize.Text = myDeskQuote.desk.GetSize().ToString();
 
-                myDeskQuote.setSizeOverage(myDesk.GetSize());
+                myDeskQuote.setSizeOverage(myDeskQuote.desk.GetSize());
                 formQuote.lbSizeOverage.Text = myDeskQuote.getSizeOverage().ToString();
-                formQuote.lbSizeCost.Text = myDeskQuote.getSizeCost(myDesk.GetSize()).ToString();
+                formQuote.lbSizeCost.Text = myDeskQuote.getSizeCost(myDeskQuote.desk.GetSize()).ToString();
 
                 formQuote.lbPriceDrawer.Text = Desk.DRAWER_PRICE.ToString();
                 formQuote.lbDrawerCost.Text = myDeskQuote.getDrawersCost(this.QuoteDrawers.Text).ToString();
@@ -84,9 +86,9 @@ namespace MegaDesk_CostaLuiz
                                 int.Parse(formQuote.lbShippingCost.Text);
 
                 formQuote.lbTotalCost.Text = totalCost.ToString();
-                formQuote.lbDateTime.Text = myDesk.GetDateTime().ToString();
+                formQuote.lbDateTime.Text = myDeskQuote.desk.GetDateTime().ToString();
 
-                QuotesModel.SaveQuote(myDesk);
+                QuotesModel.SaveQuote(myDeskQuote);
 
                 this.Close();
                 formQuote.Show();

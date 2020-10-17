@@ -13,7 +13,7 @@ namespace MegaDesk_CostaLuiz
     class QuotesModel
     {
 
-        public static void SaveQuote(Desk deskQuote)
+        public static void SaveQuote(DeskQuote deskQuote)
         {
             //find the reletive path to the quotes.json file
             string quotesPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;

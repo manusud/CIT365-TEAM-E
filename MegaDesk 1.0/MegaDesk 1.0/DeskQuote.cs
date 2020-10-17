@@ -9,7 +9,7 @@ using System.IO;
 
 namespace MegaDesk_CostaLuiz
 {
-    class DeskQuote : Desk
+    class DeskQuote
     {
         private int drawersCost;
         private int materialCost;
@@ -17,6 +17,9 @@ namespace MegaDesk_CostaLuiz
         private int myOverage;
         private int sizeCost;
         private string[,] priceRush = new string[3, 3];
+        public string customerName;
+        public string rushDays;
+        public Desk desk;
 
         public DeskQuote()
         {
@@ -39,7 +42,7 @@ namespace MegaDesk_CostaLuiz
         public int getSizeCost(int mySize)
         {
             if (mySize > 1000)
-                this.sizeCost = this.myOverage * DESKTOP_SURFACE_AREA;
+                this.sizeCost = this.myOverage * Desk.DESKTOP_SURFACE_AREA;
             else
                 this.sizeCost = 0;
             return this.sizeCost;
@@ -47,7 +50,7 @@ namespace MegaDesk_CostaLuiz
 
         public int getDrawersCost(string myNumberOfDrawers)
         {
-            this.drawersCost = int.Parse(myNumberOfDrawers) * DRAWER_PRICE;
+            this.drawersCost = int.Parse(myNumberOfDrawers) * Desk.DRAWER_PRICE;
             return this.drawersCost;
         }
 
@@ -99,11 +102,26 @@ namespace MegaDesk_CostaLuiz
             throw new NotImplementedException();
         }
 
+        public void setcustomerName(string custName)
+        {
+            customerName = custName;
+        }
+
+        public string getcustomerName()
+        {
+            return customerName;
+        }
+
+        public void setRush(string rush)
+        {
+            this.rushDays = rush;
+        }
+
         /***********************************************
          * Created by: Luiz Manoel
          * In 2020/10/16 01:24
          * ********************************************/
-        
+
         // Create a GetRushOrder method within the DeskQuote class to handle the population of a member variable that holds a two dimension array that encases the logic in a try catch block
         // Read in the rush order price list from this file: rushOrderPrices.txt
         public void GetRushOrder()
