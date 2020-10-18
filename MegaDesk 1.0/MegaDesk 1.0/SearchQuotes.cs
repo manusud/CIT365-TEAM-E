@@ -52,22 +52,6 @@ namespace MegaDesk_CostaLuiz
                 
             }
 
-
-            /*string startupPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
-
-            StreamReader r = new StreamReader(startupPath + @"\MegaDesk 1.0\MegaDesk 1.0\DataBase\quotes.json");
-            string json = r.ReadToEnd();
-            dynamic array = JsonConvert.DeserializeObject(json); 
-            foreach (var item in array)
-            {
-                if (item.desk.material = QuoteMaterial.Text) // test to insert only 
-                {
-                    string[] row = { item.customerName, "2020-10-23", "42", "56", "449", "100.23" };
-                    var listViewItem = new ListViewItem(row);
-                    listQuoteByMaterial.Items.Add(listViewItem);
-                }
-            } */
-
         }
 
         private void closeForm(object sender, FormClosedEventArgs e)
