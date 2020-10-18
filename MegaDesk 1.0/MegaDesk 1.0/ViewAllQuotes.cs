@@ -23,20 +23,5 @@ namespace MegaDesk_CostaLuiz
             this.Close();
             formMainMenu.Show();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var quoteList = new BindingList<DeskQuote>();
-            dataGridView1.DataSource = quoteList;
-            foreach (var c in quoteList)
-            {
-                c.customerName.ToString();
-                c.desk.material.ToString();
-                c.desk.widthDesk.ToString();
-                c.desk.depthDesk.ToString();
-                c.desk.sizeDesk.ToString();
-                c.totalCost.ToString();
-        }
-        }
     }
 }
