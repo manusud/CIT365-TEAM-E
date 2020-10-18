@@ -177,6 +177,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closeForm);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

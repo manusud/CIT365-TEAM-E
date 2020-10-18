@@ -15,6 +15,15 @@ namespace MegaDesk_CostaLuiz
         public ViewAllQuotes()
         {
             InitializeComponent();
+
+            var quoteList = QuotesModel.LoadQuotes();
+            foreach (var c in quoteList)
+                dataGridView1.Rows.Add(c.customerName,
+                                       c.desk.material.ToString(),
+                                       c.desk.widthDesk.ToString(),
+                                       c.desk.depthDesk.ToString(),
+                                       c.desk.sizeDesk.ToString(),
+                                       c.totalCost.ToString());                      
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,19 +33,5 @@ namespace MegaDesk_CostaLuiz
             formMainMenu.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var quoteList = new BindingList<DeskQuote>();
-            dataGridView1.DataSource = quoteList;
-            foreach (var c in quoteList)
-            {
-                c.customerName.ToString();
-                c.desk.material.ToString();
-                c.desk.widthDesk.ToString();
-                c.desk.depthDesk.ToString();
-                c.desk.sizeDesk.ToString();
-                c.totalCost.ToString();
-        }
-        }
     }
 }
