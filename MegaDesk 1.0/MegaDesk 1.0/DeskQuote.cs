@@ -20,6 +20,8 @@ namespace MegaDesk_CostaLuiz
         public string customerName;
         public string rushDays;
         public Desk desk;
+        public string quoteDate;
+        public int totalCost;
 
         public DeskQuote()
         {
@@ -117,11 +119,22 @@ namespace MegaDesk_CostaLuiz
             this.rushDays = rush;
         }
 
-        /***********************************************
-         * Created by: Luiz Manoel
-         * In 2020/10/16 01:24
-         * ********************************************/
+        public void setQuoteDate()
+        {
+            this.quoteDate = desk.GetDateTime().ToString("yyyy-MM-dd");
+        }
+        
+        public int getTotalCost()
+        {
+            this.totalCost = this.sizeCost + Desk.BASE_DESK_PRICE + this.drawersCost + this.materialCost + this.rushCost;
+            return this.totalCost;
+        }
+        
 
+        public string getQuoteDate()
+        {
+            return quoteDate;
+        }
         // Create a GetRushOrder method within the DeskQuote class to handle the population of a member variable that holds a two dimension array that encases the logic in a try catch block
         // Read in the rush order price list from this file: rushOrderPrices.txt
         public void GetRushOrder()

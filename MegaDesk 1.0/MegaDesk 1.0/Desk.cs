@@ -67,9 +67,13 @@ namespace MegaDesk_CostaLuiz
             this.depthDesk = int.Parse(depth);
         }
 
+        public void SetTotalSize(string widthDesk, string depthDesk)
+        {
+            this.sizeDesk = int.Parse(widthDesk) * int.Parse(depthDesk);            
+        }
+
         public int GetSize()
         {
-            this.sizeDesk = this.depthDesk * this.widthDesk;
             return this.sizeDesk;
         }
 

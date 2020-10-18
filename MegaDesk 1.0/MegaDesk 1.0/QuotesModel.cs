@@ -28,7 +28,7 @@ namespace MegaDesk_CostaLuiz
             }
 
             //convert deskQuote into a Json String, then convert that into a Json Object
-            //I don't like it, but it works \_o_/
+            //I don't like it, but it works \_o_/ -- Seems very good work!
             String deskQuoteString = JsonConvert.SerializeObject(deskQuote, Formatting.Indented);
             JObject deskQuoteObject = (JObject)JsonConvert.DeserializeObject(deskQuoteString);
 
@@ -40,9 +40,9 @@ namespace MegaDesk_CostaLuiz
             File.WriteAllText(quotesPath, outputString);
         }
 
-        public static List<Desk> LoadQuotes()
+        public static List<DeskQuote> LoadQuotes()
         {
-            List<Desk> quotesList = new List<Desk>();
+            List<DeskQuote> quotesList = new List<DeskQuote>();
 
             //find the reletive path to the quotes.json file
             string quotesPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
@@ -60,7 +60,7 @@ namespace MegaDesk_CostaLuiz
             {
                 // convert each object in the json file to a string, then a Json Object, then a Desk
                 String quoteString = JsonConvert.SerializeObject(quote, Formatting.Indented);
-                Desk desk = JsonConvert.DeserializeObject<Desk>(quoteString);
+                DeskQuote desk = JsonConvert.DeserializeObject<DeskQuote>(quoteString);
                 quotesList.Add(desk);
             }
 

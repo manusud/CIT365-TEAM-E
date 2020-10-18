@@ -56,7 +56,7 @@ namespace MegaDesk_CostaLuiz
                 myDeskQuote.desk.setNumberDrawers(this.QuoteDrawers.Text);
                 myDeskQuote.desk.setMaterial(this.QuoteMaterial.Text);
                 myDeskQuote.setRush(this.QuoteRush.Text);
-                
+                myDesk.SetTotalSize(this.QuoteWidth.Text, this.QuoteDepth.Text);
 
                 formQuote.lbcustomerName.Text = myDeskQuote.getcustomerName();
                 formQuote.lbBasePrice.Text = Desk.BASE_DESK_PRICE.ToString();
@@ -78,15 +78,16 @@ namespace MegaDesk_CostaLuiz
                 
                 myDeskQuote.GetRushOrder(); // Add code line in 2020-10-16
 
-
                 formQuote.lbShippingCost.Text = myDeskQuote.getRushCost(myDesk.GetSize(), this.QuoteRush.Text).ToString();
 
                 int totalCost = int.Parse(formQuote.lbSizeCost.Text) + int.Parse(formQuote.lbBasePrice.Text) +
                                 int.Parse(formQuote.lbDrawerCost.Text) + int.Parse(formQuote.lbMaterialCost.Text) +
                                 int.Parse(formQuote.lbShippingCost.Text);
 
-                formQuote.lbTotalCost.Text = totalCost.ToString();
-                formQuote.lbDateTime.Text = myDeskQuote.desk.GetDateTime().ToString();
+                formQuote.lbTotalCost.Text = myDeskQuote.getTotalCost().ToString();
+
+                myDeskQuote.setQuoteDate();
+                formQuote.lbDateTime.Text = myDeskQuote.getQuoteDate();
 
                 QuotesModel.SaveQuote(myDeskQuote);
 

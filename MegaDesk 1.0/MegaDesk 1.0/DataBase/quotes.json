@@ -1,24 +1,67 @@
 [
   {
-    "customerName": "Bob Ross",
-    "rushDays": "Normal",
+    "customerName": "Test",
+    "rushDays": "5 Days",
     "desk": {
-      "widthDesk": 24,
-      "depthDesk": 12,
-      "sizeDesk": 288,
-      "drawers": 0,
-      "material": "Pine"
-    }
+      "widthDesk": 55,
+      "depthDesk": 44,
+      "sizeDesk": 2420,
+      "drawers": 4,
+      "material": "Veneer"
+    },
+    "quoteDate": "2020-10-17",
+    "totalCost": 1945
   },
   {
-    "customerName": "Bill Gates",
+    "customerName": "Test 2",
+    "rushDays": "5 Days",
+    "desk": {
+      "widthDesk": 44,
+      "depthDesk": 44,
+      "sizeDesk": 1936,
+      "drawers": 2,
+      "material": "Laminate"
+    },
+    "quoteDate": "2020-10-17",
+    "totalCost": 1386
+  },
+  {
+    "customerName": "Test 3",
     "rushDays": "3 Days",
     "desk": {
-      "widthDesk": 96,
-      "depthDesk": 48,
-      "sizeDesk": 4608,
+      "widthDesk": 44,
+      "depthDesk": 44,
+      "sizeDesk": 1936,
+      "drawers": 1,
+      "material": "Pine"
+    },
+    "quoteDate": "2020-10-17",
+    "totalCost": 1306
+  },
+  {
+    "customerName": "Test 4",
+    "rushDays": "5 Days",
+    "desk": {
+      "widthDesk": 44,
+      "depthDesk": 44,
+      "sizeDesk": 1936,
+      "drawers": 5,
+      "material": "Oak"
+    },
+    "quoteDate": "2020-10-17",
+    "totalCost": 1636
+  },
+  {
+    "customerName": "Test 5",
+    "rushDays": "3 Days",
+    "desk": {
+      "widthDesk": 55,
+      "depthDesk": 43,
+      "sizeDesk": 2365,
       "drawers": 7,
       "material": "Oak"
-    }
+    },
+    "quoteDate": "2020-10-17",
+    "totalCost": 2195
   }
 ]
